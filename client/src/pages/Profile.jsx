@@ -18,6 +18,7 @@ import {
 } from '../redux/user/userSlice';  
 import { useDispatch } from 'react-redux';  
 
+
 function Profile() {
   const fileRef = useRef(null)
   const {currentUser, loading, error } = useSelector((state)=>state.user)
@@ -36,6 +37,7 @@ function Profile() {
   }, [file])
 
   const handleFileUpload = (file)=>{
+    
     const storage = getStorage(app);
     const fileName = new Date().getTime() + file.name;
     const storageRef = ref(storage, fileName);
