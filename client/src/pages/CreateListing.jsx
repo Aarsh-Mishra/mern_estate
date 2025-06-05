@@ -117,7 +117,7 @@ export default function CreateListing() {
 
   // Function to handle the removal of an image from the form data
   // It updates the formData state by filtering out the image at the specified index
-  
+
   const handleRemoveImage = (index) => {
     setFormData({
       ...formData,
@@ -349,7 +349,9 @@ export default function CreateListing() {
               <div className="flex flex-col items-center">
                 <p>Regular price</p>
 
-                <span className="text-xs">($ / month)</span>
+                {formData.type === "rent" && (
+                  <span className="text-xs">($ / month)</span>
+                )}
               </div>
             </div>
             {formData.offer && (
@@ -368,7 +370,9 @@ export default function CreateListing() {
                 <div className="flex flex-col items-center">
                   <p>Discounted price</p>
 
-                  <span className="text-xs">($ / month)</span>
+                  {formData.type === "rent" && (
+                    <span className="text-xs">($ / month)</span>
+                  )}
                 </div>
               </div>
             )}
