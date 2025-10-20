@@ -39,7 +39,7 @@ export default function CreateListing() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
- 
+  console.log(formData);
 
   // Function to handle the submission of images
   // It checks if the number of files is within the limit and uploads them to Firebase Storage
@@ -376,6 +376,7 @@ export default function CreateListing() {
                 </div>
               </div>
             )}
+            ;
           </div>
         </div>
 
