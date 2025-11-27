@@ -50,19 +50,14 @@ export default function Listing() {
 
         const data = await res.json();
         console.log(data);
-
         if (data.success === false) {
           setError(true);
-
           setLoading(false);
-
           return;
         }
 
         setListing(data);
-
         setLoading(false);
-
         setError(false);
       } catch (error) {
         setError(true);
