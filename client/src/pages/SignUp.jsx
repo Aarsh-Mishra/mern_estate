@@ -38,7 +38,7 @@ function SignUp() {
   }
   setLoading(false);
   setError(null);
-  navigate("/");
+  navigate("/sign-in");
       
     } catch (error) {
       setLoading(false);
@@ -53,6 +53,9 @@ function SignUp() {
   return (
     <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl text-center font-semibold my-7'>Sign Up</h1>
+      <p className="text-center text-gray-600 text-sm mt-2 mb-6">
+        After Signing Up, you have to sign in to your account again.
+      </p>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input 
         type='text' 
